@@ -1,21 +1,29 @@
 <div class="clr-row">
-        <div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+        <div class="clr-col clr-align-self-center">
             <div class="card">
                 <div class="card-header">
-                    Header
+                    Daily Question
                 </div>
                 <div class="card-block">
-                    <div class="card-title">
-                        Block
+                    <div class="card-title" *ngIf="challengeQuestion">
+                        <form clrForm>
+                            <clr-input-container>
+                              <label>{{challengeQuestion.factorA}} X {{challengeQuestion.factorB}}</label>
+                              <input placeholder="Your Answer" clrInput name="name" required />
+                              <clr-control-error>This field is required!</clr-control-error>
+                            </clr-input-container>
+                          </form>
                     </div>
-                    <div class="card-text">
-                        ...
-                    </div>
+
+
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-sm btn-link">Footer Action 1</button>
-                    <button class="btn btn-sm btn-link">Footer Action 2</button>
+                    <button class="btn btn-primary ">Submit</button>
                 </div>
             </div>
         </div>
     </div>
+
+    
+
+    

@@ -7,6 +7,9 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChallengeQuestionComponent } from './challenge-question/challenge-question.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
+import { HttpClientModule }    from '@angular/common/http';
+import { ChallengeService } from './challenge.service';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { DefaultPageComponent } from './default-page/default-page.component';
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ChallengeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
