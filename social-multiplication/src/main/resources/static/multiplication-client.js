@@ -53,6 +53,7 @@ $(document).ready(function() {
             dataType: "json",
             async: false,
             success: function(result){
+            	console.log(JSON.stringify(data));
                 if(result.correct) {
                     $('.result-message').empty().append("The result is correct! Congratulations!");
                 } else {
@@ -60,6 +61,7 @@ $(document).ready(function() {
                 }
             }
         });
+        console.log(JSON.stringify(data));
 
         updateMultiplication();
 
